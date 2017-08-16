@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gettingstarted</title>
+	<link rel="stylesheet" type="text/css" href="CSS/home.css">
+
+	<script type="text/javascript">
+		var ga = [1,2,3,4,5];
+		var photo = 0;
+
+		function slide(){
+			document.getElementById("slide").style.backgroundImage ="url('"+ga[photo]+".jpeg')";
+
+		}
+
+
+		function toNext() {
+			photo ++;
+			if(photo>(ga.length -1)){
+					photo = 0;
+			}
+			slide();
+		}
+		function toPrev(){
+			photo--;
+			if(photo<0){
+					photo = ga.length-1;
+		}
+		slide();
+	}
+	function toImage(val){
+		photo = val;
+		slide();
+	}
+	setInterval("toNext()",3000);
+
+	function Prev(){
+		window.open("login.html");
+	}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Jewelry</h1><hr/>
+		</div>
+		
+		<div id="nav">
+			<ul>
+				<li><a href="login.html">Login</a></li><br>
+				<li><a href="home.html">Home</a></li><br>
+				<li><a href="images.html">Images</a></li><br>
+				<li><a href="info.html">MoreInfo</a></li>
+			</ul>
+		</div>
+
+
+		<div id="sidebar">
+			
+				<ul>
+					<li><a href="info.html">About Jewelry.</a></li><br>
+					<li><a href="info.html">Prehistory of jewelry.</a></li><br>
+					<li><a href="info.html">Jewelry in Egypt.</a></li><br>
+					<li><a href="info.html">Jewelry in Greece.</a></li><br>
+				</ul>
+				<br>
+				
+		</div>
+
+		<div id="center">
+			<div id="slide">
+				<button style="margin-top:239px;" onClick="toPrev();" class="btn-next"><</button>
+				<button style="margin-top:239px;float:right;" onClick="toNext()"; class="btn-next">></button>
+				<div style="margin-top:120px; width:700px;">
+					<center>
+						<button onclick="toImage(0);" class="btn-nav"> </button>
+						<button onclick="toImage(1);" class="btn-nav"> </button>
+						<button onclick="toImage(2);" class="btn-nav"> </button>
+						<button onclick="toImage(3);" class="btn-nav"> </button>
+					</center>
+				</div>
+
+			</div>
+		</div>
+
+		
+
+	</div>
+
+</body>
+</html>

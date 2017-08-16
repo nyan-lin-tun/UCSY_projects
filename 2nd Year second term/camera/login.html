@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Camera</title>
+	<style>
+		body {margin:0;}
+
+		.topnav {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		.topnav a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.topnav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.topnav a.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+	</style>
+</head>
+
+<script type="text/javascript" >
+		function login(){
+			var name=document.getElementById("nameId").value;
+			var  pw=document.getElementById("pwId").value;
+
+			if(name=="admin" && pw=="admin"){
+				alert("Loing succeed")
+				window.open("index.html");
+			}
+			else{
+				alert("Incorrect password or username \nPlease Try again!!!"); 
+		}
+	}
+</script>
+
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<a href="index.html">Home</a>
+		<a href="images.html">Images</a>
+		<a href="info.html">More Info</a>
+		<a href="login.html">Login</a>
+		
+	</div>
+	<br>
+	
+	<br>
+	<center>Username: <input type="text" id="nameId" name="name"></center>
+	<br>
+	<br>
+	<center>Password: <input type="password" id="pwId" name="pw"></center>
+	<br>
+	<br>
+	<center><input type="button" value="Login" onClick="login()"></center>
+</body>
+</html>

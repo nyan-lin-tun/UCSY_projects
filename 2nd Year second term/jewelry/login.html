@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gettingstarted</title>
+	<link rel="stylesheet" type="text/css" href="CSS/login.css">
+</head>
+<script type="text/javascript" >
+		function login(){
+			var name=document.getElementById("nameId").value;
+			var  pw=document.getElementById("pwId").value;
+
+			if(name=="admin" && pw=="admin"){
+				alert('login success');
+				window.open("home.html");
+			}
+			else{
+				alert("Incorrect password or username \nPlease Try again!!!"); 
+		}
+	}
+</script>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Jewelry</h1><hr />
+		</div>
+		
+		<div id="nav">
+			<ul>
+				<li><a href="login.html">Login</a></li><br>
+				<li><a href="home.html">Home</a></li><br>
+				<li><a href="images.html">Images</a></li><br>
+				<li><a href="info.html">MoreInfo</a></li><br>
+			</ul>
+		</div>
+		<div id="center">
+			<div id="login" >
+				<h1>Login</h1>
+			<table>
+				<form id="f1id" name="f1">
+				<tr>
+				<td>Username</td>
+				<td><input type="text" id="nameId" name="name"></td>
+				</tr>
+				<tr>
+				<td>Password</td>
+				<td><input type="password" id="pwId" name="pw"></td>
+				</tr>
+				<tr>
+				<td><input type="button" value="Login" onClick="login()"></td>
+				</tr>
+				</form>
+		</table>
+</div>
+			
+		</div>
+
+		
+	</div>
+
+</body>
+</html>

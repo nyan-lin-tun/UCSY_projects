@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gettingstarted</title>
+	<link rel="stylesheet" type="text/css" href="CSS/image.css">
+
+	<script type="text/javascript">
+	var images = document.getElementById("gallary").getElementsByTagName("img");
+	function changeImage(event){
+		event = event || window.event;
+		var targetElement = event.target || event.srcElement;
+		if (targetElement.tagName == "img") {}
+
+		document.getElementById("mainimage").src = targetElement.getAttribute("src");
+	}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<a name="top"></a>
+		<div id="header">
+			<h1>Jewelry</h1><hr />
+		</div>
+		
+		<div id="nav">
+			<ul>
+				<li><a href="login.html">Login</a></li><br>
+				<li><a href="home.html">Home</a></li><br>
+				<li><a href="images.html">Images</a></li><br>
+				<li><a href="info.html">MoreInfo</a></li>
+			</ul>
+		</div>
+		
+
+		<div id="center">
+			<div id="paragraph"><h3><i>You can view the following image by clicking!!!</i></h3></div>
+				<img height="477px" width="720px" style="border:3px solid gray" src="5.jpeg" id="mainimage"/><br>
+					<div id="gallary" onclick="changeImage(event)">
+						<img src="image/1.jpeg" class="imgStyle">
+						<img src="image/2.jpeg" class="imgStyle">
+						<img src="image/3.jpeg" class="imgStyle">
+						<img src="image/4.jpeg" class="imgStyle">
+						<img src="image/5.jpeg" class="imgStyle">
+						<img src="image/6.jpeg" class="imgStyle">
+							<br>
+						<img src="image/7.jpeg" class="imgStyle">
+						<img src="image/8.jpeg" class="imgStyle">
+						<img src="image/9.jpeg" class="imgStyle">
+						<img src="image/10.jpeg" class="imgStyle">
+						<img src="image/11.jpeg" class="imgStyle">
+						<img src="image/12.jpeg" class="imgStyle">
+					
+
+		
+
+	</div>
+
+</body>
+</html>

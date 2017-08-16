@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Camera</title>
+	<style>
+		body {margin:0;}
+
+		.topnav {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		.topnav a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+		.topnav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		.topnav a.active {
+			background-color: #4CAF50;
+			color: white;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/images.css">
+	<script type="text/javascript">
+	var images = document.getElementById("gallary").getElementsByTagName("img");
+	function changeImage(event){
+		event = event || window.event;
+		var targetElement = event.target || event.srcElement;
+		if (targetElement.tagName == "img") {}
+
+		document.getElementById("mainimage").src = targetElement.getAttribute("src");
+	}
+	</script>
+</head>
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<a href="index.html">Home</a>
+		<a href="images.html">Images</a>
+		<a href="info.html">More Info</a>
+		<a href="login.html">Login</a>
+		
+	</div>
+	<div id="container">
+	<div id="center">
+	<br>
+	<br>
+	<br>
+
+				<img height="477px" width="720px" style="border:3px solid gray" src="img/canon.jpeg" id="mainimage"/><br>
+					<div id="gallary" onclick="changeImage(event)">
+						<img src="img/canon.jpeg" class="imgStyle">
+						<img src="img/fujiflim.jpeg" class="imgStyle">
+						<img src="img/leica.jpeg" class="imgStyle">
+						<img src="img/lumix.jpeg" class="imgStyle">
+						<img src="img/nikon.jpeg" class="imgStyle">
+						<img src="img/sony.jpeg" class="imgStyle">
+							<br>
+						<img src="img/canon_front.jpeg" class="imgStyle">
+						<img src="img/fujiflim_front.jpeg" class="imgStyle">
+						<img src="img/leica_front.jpeg" class="imgStyle">
+						<img src="img/lumix_front.jpeg" class="imgStyle">
+						<img src="img/nikon_front.jpeg" class="imgStyle">
+						<img src="img/sony_front.jpeg" class="imgStyle">
+					
+					</div>
+	</div>
+	</div>
+</body>
+</html>
